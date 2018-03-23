@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "117749396799",
+    "firebase_url": "https://readerscript-ed3ec.firebaseio.com",
+    "project_id": "readerscript-ed3ec",
+    "storage_bucket": "readerscript-ed3ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117749396799:android:91bb4b0532d1770d",
+        "android_client_info": {
+          "package_name": "com.example.shivam.readerscript"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117749396799-r12fof16vsqbon1rhc7qmfmip2kk04dh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shivam.readerscript",
+            "certificate_hash": "73b95d1dfae420e03dad6dff2d89ca279acc5995"
+          }
+        },
+        {
+          "client_id": "117749396799-od3tbvpnetqj1821g9mjl6bv7cb3q1do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp0IlYu4K8fGg1BU9tj2g3GUySph_66oA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117749396799-od3tbvpnetqj1821g9mjl6bv7cb3q1do.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
