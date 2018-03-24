@@ -7,13 +7,13 @@ package com.example.shivam.readerscript;
 public class products {
     private   String productid;
     private   String name;
-    private   int discountpercentage;
-    private   int discounttimer;
-    private   int quantity;
+    private   String discountpercentage;
+    private   String discounttimer;
+    private   String quantity;
     private   String description;
     private   String imageurl;
 
-    public products(String productid, String name, int discountpercentage, int discounttimer, int quantity, String description, String imageurl) {
+    public products(String productid, String name, String discountpercentage, String discounttimer, String quantity, String description, String imageurl) {
         this.productid = productid;
         this.name = name;
         this.discountpercentage = discountpercentage;
@@ -21,6 +21,10 @@ public class products {
         this.quantity = quantity;
         this.description = description;
         this.imageurl = imageurl;
+    }
+
+    public products(){
+
     }
 
     public String getProductid() {
@@ -39,27 +43,27 @@ public class products {
         this.name = name;
     }
 
-    public int getDiscountpercentage() {
+    public String getDiscountpercentage() {
         return discountpercentage;
     }
 
-    public void setDiscountpercentage(int discountpercentage) {
+    public void setDiscountpercentage(String discountpercentage) {
         this.discountpercentage = discountpercentage;
     }
 
-    public int getDiscounttimer() {
+    public String getDiscounttimer() {
         return discounttimer;
     }
 
-    public void setDiscounttimer(int discounttimer) {
+    public void setDiscounttimer(String discounttimer) {
         this.discounttimer = discounttimer;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
