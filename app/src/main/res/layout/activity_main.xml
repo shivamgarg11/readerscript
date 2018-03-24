@@ -6,14 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.shivam.readerscript.MainActivity">
 
-   <TextView
-       android:id="@+id/text"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="gjvftxctfc"/>
 
    <ListView
-       android:layout_marginTop="80dp"
+       android:layout_marginTop="10dp"
        android:id="@+id/listview"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content">

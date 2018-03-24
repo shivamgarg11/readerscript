@@ -52,8 +52,12 @@ public class adaptors extends BaseAdapter {
             convertView = li.inflate(R.layout.layout, parent, false);
         }
 
-         final String EVENT_DATE_TIME = "2018-03-20 08:59:59";
-         final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+        products products=arrayList.get(position);
+
+
+
+        final String EVENT_DATE_TIME = products.getDiscounttimer();
+         final String DATE_FORMAT = "yyyy-MM-dd ";
          final LinearLayout linear_layout_1, linear_layout_2;
          final TextView tv_days, tv_hour, tv_minute, tv_second;
          final Handler handler = new Handler();
@@ -96,9 +100,17 @@ public class adaptors extends BaseAdapter {
         };
         handler.postDelayed(runnable, 0);
 
+        TextView name=convertView.findViewById(R.id.name);
+        TextView discount=convertView.findViewById(R.id.discount);
+        TextView quantity=convertView.findViewById(R.id.quantity);
 
         ImageView imageView=convertView.findViewById(R.id.image);
-        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(imageView);
+        Picasso.get().load(products.getImageurl()).into(imageView);
+
+        name.setText(products.getName());
+        discount.setText(products.getDiscountpercentage());
+        quantity.setText(products.getQuantity());
+
 
 
 

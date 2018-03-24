@@ -22,37 +22,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final TextView tv=findViewById(R.id.text);
-        ListView listView=findViewById(R.id.listview);
+        final ArrayList<products> productsArrayList=new ArrayList<>();
+
+        final ListView listView=findViewById(R.id.listview);
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref=database.getReference("PRODUCTS");
-        products pr=new products("a","b","c","d","e","f","g");
-        //ref.push().setValue(pr);
-       /* final String[] str = {""};
+        products pr=new products("a","sem1 books","20%","2018-03-26 08:59:59","100","f","http://pngimg.com/uploads/book/book_PNG2122.png");
+        ref.push().setValue(pr);
+
+        ref=database.getReference("PRODUCTS");
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot snap:dataSnapshot.getChildren()){
                 products products=snap.getValue(products.class);
+                productsArrayList.add(products);
                 }
+                adaptors adaptors=new adaptors(productsArrayList,MainActivity.this);
+                listView.setAdapter(adaptors);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });*/
+        });
 
 
-        ArrayList<products> arrayList=new ArrayList<>();
-        arrayList.add(new products("a","b","c","d","e","f","g"));
-        arrayList.add(new products("a","b","c","d","e","f","g"));
-        arrayList.add(new products("a","b","c","d","e","f","g"));
-        adaptors adaptors=new adaptors(arrayList,MainActivity.this);
-        listView.setAdapter(adaptors);
 
 
 

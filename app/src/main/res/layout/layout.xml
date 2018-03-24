@@ -15,40 +15,58 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_margin="10dp"
                 android:id="@+id/image"
                 android:layout_width="200dp"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="18dp" />
 
             <TextView
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+
+            <TextView
                 android:id="@+id/discount"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_alignTop="@+id/image"
-                android:layout_marginTop="14dp"
-                android:layout_toEndOf="@+id/image"
-                android:text="discount" />
+                android:layout_marginTop="33dp"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
 
             <TextView
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:id="@+id/quantity"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/discount"
-                android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/image"
-                android:text="quantity" />
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="25dp"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/quantity"
+                android:layout_marginTop="56dp"
                 android:background="#1E253E"
                 android:orientation="horizontal"
-                android:layout_margin="10dp"
-                android:layout_below="@+id/image">
+                >
 
                 <LinearLayout
                     android:id="@+id/linear_layout_1"
@@ -63,17 +81,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        android:text="Android Event Start"
+                        android:text="SALE ENDED"
                         android:textColor="@android:color/white"
                         android:textSize="20dp"
                         android:textStyle="normal" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_margin="10dp"
                     android:id="@+id/linear_layout_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:background="#1e253e"
                     android:visibility="visible">
 
@@ -186,6 +204,26 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/discount"
+                android:layout_alignTop="@+id/image"
+                android:text="DISCOUNT"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/quantity"
+                android:layout_alignStart="@+id/quantity"
+                android:text="QUANTITY"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
 
 
         </RelativeLayout>
